@@ -220,10 +220,13 @@ html{
 }
 .tour-section .tickets-list{
     background-color: #fff;
-    margin-top: 40px;
+    
+    width: 768px;
+    margin: 40px auto 0px;
 }
 
 .tour-section .tickets-list li{
+
     font-size: 15px;
     padding: 11px 16px;
     color: #757575;
@@ -280,3 +283,84 @@ html{
         transform: translateY(-10px);
     }
 }
+
+.tour-section .places-list{
+    margin-top: 32px;
+    margin-left: 8px; 
+    margin-right: 8px;
+    margin-bottom: 48px;
+}
+.tour-section .place-item{
+    float: left;
+    
+    width: calc(100%/3);
+    padding: 0 8px;
+    
+}
+.tour-section .place-img{
+    width: 100%;
+
+    display: block;
+    /* Khi sử dụng "display: block", phần tử đó sẽ được hiển thị dưới dạng khối, chiếm hết chiều rộng của phần tử cha và sử dụng một hàng riêng biệt để hiển thị nội dung */
+    
+}
+.tour-section .place-img:hover{
+    opacity: 0.6;
+}
+.tour-section .place-body{
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+.tour-section .place-heading{
+    font-size: 15px;
+    font-weight: 700px;    
+}
+.tour-section .place-time{
+    opacity: 0.6;
+    margin-top: 15px;
+    }
+.tour-section .place-description{
+    margin-top: 15px;
+    line-height: 1.5;
+
+    }
+.tour-section .place-buy-btn{
+    
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    padding: 10px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: all 0.5s;
+    position: relative;
+    border: 2px solid #000;
+}
+.tour-section .place-buy-btn:hover{
+    color: #000;
+    background-color: #f44336;
+    transform: translateX(10px);
+    border-color: #f44336;
+}
+
+.tour-section .place-buy-btn:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    transition: all 0.5s;
+    border: 2px solid #000;
+}
+
+.tour-section .place-buy-btn:hover:before {
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border-color: #f44336;
+}
+
