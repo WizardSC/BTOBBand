@@ -420,12 +420,15 @@ html {
     display: none;
 }
 
-.modal .modal-container {
+.modal-container {
     background-color: #fff;
     width: 900px;
     min-height: 200px;
 
     position: relative;
+    animation: modalFadeIn 0.8s ease-in-out forwards;
+    transition: all 0.3s ease-in-out;
+    /* Các giá trị ease-in-out và forwards sẽ giúp cho animation hoạt động mượt mà và giữ lại trạng thái cuối cùng của animation sau khi hoàn thành. */
 }
 
 .modal .modal-header {
@@ -511,4 +514,22 @@ html {
 
 .modal .modal-footer a{
     color: #2196F3;
+}
+
+.open{
+    display: flex;
+}
+
+@keyframes modalFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    50% {
+        transform: translateY(30px); /* thêm một keyframe mới ở 50% để tạo ra hiệu ứng phóng to và thu nhỏ nhẹ nhàng. */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
