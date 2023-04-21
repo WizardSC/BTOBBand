@@ -69,28 +69,28 @@
                     consequat.
                 </p>
                 <div class="member-lists">
-                    <div class="member-item">
+                    <div class="col col-third text-center member-item">
                         <p class="member-name">Lee Changsub</p>
                         <img src="./assets/img/band/changsub.jpg" alt="" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col col-third text-center member-item">
                         <p class="member-name">Seo Eunkwang</p>
                         <img src="./assets/img/band/eunkwang.jpg" alt="" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col col-third text-center member-item">
                         <p class="member-name">Im Hyunsik</p>
                         <img src="./assets/img/band/hyunsik.jpg" alt="" class="member-img">
                     </div>
 
-                    <div class="member-item">
+                    <div class="col col-third text-center member-item">
                         <p class="member-name">Lee Minhyuk</p>
                         <img src="./assets/img/band/minhyuk.jpg" alt="" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col col-third text-center member-item">
                         <p class="member-name">Shin Peniel</p>
                         <img src="./assets/img/band/peniel.jpg" alt="" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col col-third text-center member-item">
                         <p class="member-name">Yook Sungjae</p>
                         <img src="./assets/img/band/sungjae.jpg" alt="" class="member-img">
                     </div>
@@ -111,8 +111,8 @@
                         <li>November<span class="quantity">3</span></li>
                     </ul>
                     <!-- Places -->
-                    <div class="places-list">
-                        <div class="place-item">
+                    <div class="row places-list">
+                        <div class="col col-third place-item">
                             <img src="./assets/img/place/place1.jpg" alt="" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
@@ -122,7 +122,7 @@
                                 <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="place-item">
+                        <div class="col col-third place-item">
                             <img src="./assets/img/place/place2.jpg" alt="" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
@@ -132,7 +132,7 @@
                                 <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="place-item">
+                        <div class="col col-third place-item">
                             <img src="./assets/img/place/place3.jpg" alt="" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
@@ -142,7 +142,7 @@
                                 <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="clear"></div>
+                        <!-- <div class="clear"></div> -->
                     </div>
                 </div>
             </div>
@@ -152,6 +152,35 @@
                     CONTACT
                 </h2>
                 <p class="section-sub-heading ">Fan? Drop a note!</p>
+
+                <div class="row contact-content">
+                    <div class="col col-half contact-info">
+                        <p><i class="fa-sharp fa-solid fa-location-dot"></i>Chicago, US</p>
+                        <p><i class="fa-solid fa-phone"></i>Phone: +00 151515</p>
+                        <p><i class="fa-solid fa-envelope"></i>Email: mail@mail.com</p>
+
+                    </div>
+                    <div class="col col-half contact-form">
+                        <div class="row">
+                            <div class="col col-half">
+                                <input type="text" placeholder="Name"  required="required" id="" class="form-control">
+                            </div>
+                            
+                            <div class="col col-half">
+                                <input type="email" placeholder="Email"  required="required" id=""  class="form-control">
+                            </div>
+                            <!-- <div class="clear"></div> -->
+                        </div>
+                        <div class="row mt-8">
+                            <div class="col col-full">
+                                <input type="text" placeholder="Message"  required="required"id="" class="form-control">
+                            </div>
+                        </div>
+                        <input class="form-submit-btn mt-16" type="submit" value="SEND">
+                       
+                       
+                    </div>
+                </div>
             </div>
         </div>
         <div id="footer">
@@ -177,7 +206,7 @@
                 <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many?">
 
                 <label for="ticket-email" class="modal-label">
-                    
+
                     <i class="fa-solid fa-user"></i>
                     Send To
                 </label>
@@ -187,34 +216,34 @@
                     <i class="fa-solid fa-check"></i>
                 </button>
             </div>
-            <footer class="modal-footer">
+            <footer class="modal-footer mt-8">
                 <p>Need <a href="">help?</a></p>
             </footer>
-            
+
         </div>
     </div>
     <script>
-        
+
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
         const modal = document.querySelector('.js-modal')
         const modalClose = document.querySelector('.js-modal-close')
         const modalContainer = document.querySelector('.js-modal-container')
-        function showBuyTickets(){
+        function showBuyTickets() {
             modal.classList.add('open')
         }
 
-        function hideBuyTickets(){
+        function hideBuyTickets() {
             modal.classList.remove('open')
         }
-        for (const buyBtn of buyBtns){
+        for (const buyBtn of buyBtns) {
             buyBtn.addEventListener('click', showBuyTickets)
         }
 
-        modalClose.addEventListener('click',hideBuyTickets)
+        modalClose.addEventListener('click', hideBuyTickets)
 
         modal.addEventListener('click', hideBuyTickets)
 
-        modalContainer.addEventListener('click', function(event){
+        modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
         })
     </script>
