@@ -72,6 +72,7 @@ có phần tử float nào được phép nằm bên cạnh nó.*/
 }
 
 html {
+    scroll-behavior: smooth;
     font-family: "Lato", sans-serif;
 }
 
